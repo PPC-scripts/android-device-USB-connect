@@ -10,7 +10,9 @@ I thank the effort of antiX forum user Sybok, that helped shape the script into 
 
 - What this script does:
 
-    - run the script once - if it finds any android device connected to your linux OS, it's file system is automaticaly mounted and it's contents displayed in the default file manager. If no device is detected a small window pops up, tells the user how to connect a device to the computer. If there's any further need for user to allow access to the device, a new warning pops up, asking the user to do that.
+    - run the script once - if an android device is connected to your linux OS, it's file system is automaticaly mounted and it's contents displayed in the default file manager.
+            If no device is detected a small window pops up and tells the user how to connect a device to the computer.
+            If there's any further need for user to allow access to the device, a new warning pops up, asking the user to do that, then conties to try to mount the device.
     - run the script again - a window, telling the user that an android device is already mounted, asks if the device is to be accessed (then the default file manager displays it's contents) or to be unmounted.
  
  * Dependencies:
