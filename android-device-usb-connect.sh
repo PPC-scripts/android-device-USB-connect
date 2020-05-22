@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------
-# antiX gui for mounting/unmount android devices, by PPC, with the help of Sybok 19/5/2020, fully GPL...
+# antiX gui for mounting/unmount android devices, by PPC and sybok, 21/5/2020, fully GPL... https://pastebin.com/EgLpqLvd
 # -----------------------------------------------------------------------------
 
 output_a="$HOME/.jmtpfs-output.txt"
@@ -50,7 +50,16 @@ check_mounted(){
 		#--button Unmount && fusermount -u "$dir" && rm -r "$dir" && exit
 			foo=$?
 			[[ $foo -eq 1 ]] && echo 'user choosed to Access the android device' && xdg-open "$dir" && exit 1
-			[[ $foo -eq 2 ]] && echo 'user choosed to unmount the android device' && fusermount -u "$dir" && rm -r "$dir" && exit
+			[[ $foo -eq 2 ]] && echo 'user choosed to unmount the android device' && fusermount -u "$dir" && rm -r "$dir" ###&& exit
+				#### NEW confirmation dialog, that warns if it's safe to unplug the device
+				if [ "$(ls -A "$dir")" ]; then
+					echo "Android device WAS NOT umounted for some reason, don't unmplug it!!!"
+					yad --fixed --window-icon=$yad_window_icon --image=$yad_image --title "$yad_title" --center --text=$" Android device WAS NOT umounted for some reason, don't unmplug it!!!  "  --button=$"OK" && exit
+				 else
+					echo "Android device is umounted, it's safe unmplug it!!!"
+					yad --fixed --window-icon=$yad_window_icon --image=$yad_image --title "$yad_title" --center --text=$" Android device is umounted, it's safe unmplug it!!!  "  --button=$"OK" && exit
+		
+				fi
 	fi
  } # check_mounted
 
