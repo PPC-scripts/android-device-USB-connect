@@ -21,6 +21,8 @@ I thank the effort of antiX forum user Sybok, that helped shape the script into 
  * Notes:
   This script was writen using antiX 19, and tested on that OS only. It should work on any Linux OS that has all the dependencies installed...
   
+  I currently offer 3 version of the script: the original one, that should be compatible with any Linux distro, Rox file manager (that uses this file manager only) and a "antiX only" version, that accesses the devices contents using this OS default File Manager
+  
   
  
  
