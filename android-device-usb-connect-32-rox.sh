@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------
-# antiX gui for mounting/unmount android devices, by PPC and sybok, 21/5/2020, fully GPL... https://pastebin.com/EgLpqLvd
+# antiX gui for mounting/unmount android devices, by PPC and sybok, 21/5/2020, fully GPL...
 # -----------------------------------------------------------------------------
 
 output_a="$HOME/.jmtpfs-output.txt"
