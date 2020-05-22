@@ -54,10 +54,10 @@ check_mounted(){
 				#### NEW confirmation dialog, that warns if it's safe to unplug the device
 				if [ "$(ls -A "$dir")" ]; then
 					echo "Android device WAS NOT umounted for some reason, don't unmplug it!!!"
-					yad --fixed --window-icon=$yad_window_icon --image=$yad_image --title "$yad_title" --center --text=$" Android device WAS NOT umounted for some reason, don't unmplug it!!!  "  --button=$"OK" && exit
+					yad --fixed --window-icon=$yad_window_icon --image=$yad_image --title "$yad_title" --center --text=$" Android device WAS NOT umounted for some reason, don't unplug it!!!  "  --button=$"OK" && exit
 				 else
 					echo "Android device is umounted, it's safe unmplug it!!!"
-					yad --fixed --window-icon=$yad_window_icon --image=$yad_image --title "$yad_title" --center --text=$" Android device is umounted, it's safe unmplug it!!!  "  --button=$"OK" && exit
+					yad --fixed --window-icon=$yad_window_icon --image=$yad_image --title "$yad_title" --center --text=$" Android device is umounted, it's safe to unplug it!!!  "  --button=$"OK" && exit
 		
 				fi
 	fi
