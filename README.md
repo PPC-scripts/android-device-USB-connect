@@ -8,7 +8,7 @@ I didn't find a single short and direct GUI way that allowed me to simply access
 
 I thank the effort of antiX forum user Sybok, that helped shape the script into something that made it look like it was coded by someone that knew what he was doing...
 
-**- How to use this script:**
+- **How to use this script:**
 
     - **run the script once - if an android device is connected to your linux OS, it's file system is automaticaly mounted and it's contents displayed in the default file manager.**
             - If no device is detected a small window pops up and tells the user how to connect a device to the computer.
