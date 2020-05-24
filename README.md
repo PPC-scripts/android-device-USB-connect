@@ -23,6 +23,16 @@ I thank the effort of antiX forum user Sybok, that helped shape the script into 
   
   I currently offer 2 version of the script: the original one, that should be compatible with any Linux distro, and a "antiX only" version, that accesses the devices contents using this OS default File Manager.
   
+  * Tip: For antiX linux user that use the default Icewm desktop and want to have an icon for this script available in the toolbar:
+   1- save the script.
+   2- antiX Menu- Control Centre - Edit Icewm... - Toolbar tab
+   3- Add a line with this contents (using the correct full path to your script):
+        
+    prog "Android Device USB Connect" /usr/share/icons/papirus-antix/24x24/devices/phone.png [path/to/script]
+    
+  4- Save the changes and restart Icewm (antiX Menu - Logout arrow- Restart Icewm)
+  
+  
   
  
  
