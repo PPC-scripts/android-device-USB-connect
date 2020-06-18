@@ -1,8 +1,14 @@
 #!/bin/bash
-# Rclone remote drive mounter script v0.1b
+# Rclone remote drive mounter script v0.1 
 # choose a remote using yad
   rclone listremotes > /tmp/rclone_remote_list.txt
- selection=$(yad --title="Choose Cloud service to mount with Rclone" --width=550 --height=400 --center --separator=" " --list  --column="Configured Cloud services" --button=gtk-ok:0 --button=gtk-help:"bash -c yad_help" --button=gtk-quit:1 < /tmp/rclone_remote_list.txt)
+ selection=$(yad --title="Choose Cloud service to mount with Rclone" --width=550 --height=400 --center --separator=" " --list  --column="Configured Cloud services" --button=gtk-ok:0 --button="Unmount Cloud Drives":1 --button=gtk-quit:2 < /tmp/rclone_remote_list.txt)
+ foo=$?
+[[ $foo -eq 2 ]] && exit 0
+if [[ $foo -eq 1 ]]; then
+pkill rclone && exit 0
+fi
+
 # create a mount point using the same name:
 mount_point=$(echo $selection | sed 's/.$//')
 mount_point_no_spaces=$(echo $mount_point | sed -e 's/ //g')
